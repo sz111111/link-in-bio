@@ -1,2 +1,266 @@
-<h1>This is my homepage</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Link in Bio</title>
+  <!-- Tells mobile browsers to report the true width of the screen, crucial for responsiveness. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 
+    OPTIONAL: Load Font Awesome for social icons. 
+    (If you prefer text links instead of icons, remove this <script> and the <i> tags below.)
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
 
+  <!-- OPTIONAL: Load Google Fonts. Adjust to whatever fonts you like. -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Inline CSS for demo (you could put this in a separate .css file). -->
+  <style>
+    /* Make html/body fill the window so the background covers the full screen. */
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    /* 
+      Body styles:
+      - Gradient background (customize colors if you want).
+      - White default text color.
+      - Some top/bottom padding.
+      - A default font from Google Fonts, or fallback to sans-serif.
+    */
+    body {
+      background: linear-gradient(
+        180deg, 
+        #1f005c, 
+        #5b0060, 
+        #870160, 
+        #ac255e, 
+        #ca485c, 
+        #e16b5c, 
+        #f39060, 
+        #ffb56b
+      );
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    /* 
+      Main container:
+      - A max-width for a nice, centered column layout.
+      - margin: auto will center it horizontally.
+    */
+    .main-container {
+      max-width: 640px;
+      margin: auto;
+    }
+
+    /*
+      IMAGE ROW:
+      - Center the avatar.
+      - Add some spacing below it.
+    */
+    .image-row {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /*
+      Avatar image:
+      - For a square/circular look, set explicit width/height.
+      - object-fit: cover prevents distortion.
+    */
+    .avatar-image {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%; /* circle */
+    }
+
+    /* 
+      NAME ROW:
+      - Centered text,
+      - A bigger, bolder font (using Playfair Display).
+    */
+    .name-row {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    /*
+      SOCIAL ICONS ROW:
+      - Use flex to line them up in a row.
+      - Space them out evenly.
+    */
+    .social-icons-row {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+
+    /* 
+      Adjust icon size (optional).
+    */
+    .social-icons-row i {
+      font-size: 28px;
+    }
+
+    /*
+      LINKS ROW: 
+      Each link "item" is a block with an optional thumbnail & text.
+    */
+    .links-row {
+      margin-bottom: 30px; /* spacing after links, if you want more content later */
+    }
+
+    /* 
+      .item:
+      - Display as flex row,
+      - Center items vertically,
+      - A “pill” background with padding, etc.
+    */
+    .item {
+      display: flex;
+      align-items: center;
+      background-color: rgba(149, 123, 173, 0.5);
+      border-radius: 1000px;
+      box-shadow: 4px 4px 10px rgba(122,32,122,0.5);
+      margin-bottom: 20px;
+      padding: 5px;
+      padding-right: 48px; /* extra space on the right so text is horizontally centered. */
+    }
+
+    /*
+      Optional thumbnail for each link in .item
+      (e.g., if you have more images to showcase).
+    */
+    .thumbnail {
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      object-fit: cover;
+      margin-right: 10px; /* space between image & link text */
+    }
+
+    /* 
+      The link text:
+      - Make it fill leftover space (.link-text { flex-grow: 1 }),
+      - Center the text,
+      - Turn off underlines by default,
+      - Keep a consistent color with the rest of the page.
+    */
+    .link-text {
+      flex-grow: 1;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* 
+      Optional link hover style. 
+      Remove or customize as desired.
+    */
+    .link-text:hover {
+      text-decoration: underline;
+    }
+
+    /*
+      DEBUGGING OUTLINE:
+      Uncomment to see element boundaries.
+    */
+    /*
+    * {
+      border: 1px red dashed !important;
+    }
+    */
+  </style>
+</head>
+
+<body>
+
+  <div class="main-container">
+
+    <!-- IMAGE ROW -->
+    <div class="image-row">
+      <!-- Replace the src with the correct path to your image file.
+           If the file is in the same folder, just use the filename. -->
+      <img 
+        class="avatar-image" 
+        src="c324d6fb5128adc54b62870937245b9.jpg" 
+        alt="My Photo"
+      >
+    </div>
+
+    <!-- NAME ROW -->
+    <div class="name-row">
+      Shihan Zhao
+    </div>
+
+    <!-- SOCIAL ICONS ROW -->
+    <div class="social-icons-row">
+      <!-- GitHub icon -->
+      <a href="https://github.com/sz111111" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <!-- LinkedIn icon -->
+      <a href="https://www.linkedin.com/in/s-zhao-052867247/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+
+    <!-- LINKS ROW -->
+    <div class="links-row">
+
+      <!-- EXAMPLE LINK ITEM #1 -->
+      <div class="item">
+        <!-- Optional thumbnail for your link -->
+        <img 
+          class="thumbnail" 
+          src="c324d6fb5128adc54b62870937245b9.jpg" 
+          alt="Thumbnail 1"
+        >
+        <!-- The clickable text -->
+        <a 
+          class="link-text" 
+          href="https://example.com/your-article" 
+          target="_blank"
+        >
+          Example Link #1
+        </a>
+      </div>
+
+      <!-- EXAMPLE LINK ITEM #2 (Duplicate as needed) -->
+      <div class="item">
+        <img 
+          class="thumbnail" 
+          src="c324d6fb5128adc54b62870937245b9.jpg" 
+          alt="Thumbnail 2"
+        >
+        <a 
+          class="link-text" 
+          href="https://example.com/another-link" 
+          target="_blank"
+        >
+          Example Link #2
+        </a>
+      </div>
+
+      <!-- Add more .item blocks as needed -->
+
+    </div> <!-- /links-row -->
+
+  </div> <!-- /main-container -->
+
+</body>
+</html>
